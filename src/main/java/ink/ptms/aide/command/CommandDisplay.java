@@ -27,11 +27,6 @@ import java.util.stream.Collectors;
 )
 public class CommandDisplay extends BaseMainCommand {
 
-    @Override
-    public String getCommandTitle() {
-        return "§e§l----- §6§lAide Commands §e§l-----";
-    }
-
     @SubCommand
     BaseSubCommand title = new BaseSubCommand() {
 

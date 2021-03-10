@@ -1,20 +1,14 @@
 package ink.ptms.aide.command;
 
 import com.google.common.base.Joiner;
-import io.izzel.taboolib.TabooLibAPI;
-import io.izzel.taboolib.module.locale.TLocale;
-import io.izzel.taboolib.module.command.base.BaseCommand;
-import io.izzel.taboolib.module.command.base.BaseMainCommand;
-import io.izzel.taboolib.module.command.base.BaseSubCommand;
-import io.izzel.taboolib.module.command.base.Argument;
-import io.izzel.taboolib.module.command.base.SubCommand;
+import io.izzel.taboolib.module.command.base.*;
+import io.izzel.taboolib.util.ArrayUtil;
 import io.izzel.taboolib.util.Commands;
 import io.izzel.taboolib.util.Strings;
 import io.izzel.taboolib.util.plugin.PluginLoadState;
 import io.izzel.taboolib.util.plugin.PluginLoadStateType;
 import io.izzel.taboolib.util.plugin.PluginUnloadState;
 import io.izzel.taboolib.util.plugin.PluginUtils;
-import io.izzel.taboolib.util.ArrayUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -36,11 +30,6 @@ import java.util.stream.Collectors;
         permission = "taboolib.admin"
 )
 public class CommandPlugin extends BaseMainCommand {
-
-    @Override
-    public String getCommandTitle() {
-        return "§e§l----- §6§lAide Commands §e§l-----";
-    }
 
     @SubCommand(priority = 1)
     BaseSubCommand load = new BaseSubCommand() {

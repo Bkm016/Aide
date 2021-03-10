@@ -20,11 +20,6 @@ import org.jetbrains.annotations.NotNull;
 )
 public class CommandExecute extends BaseMainCommand {
 
-    @Override
-    public String getCommandTitle() {
-        return "§e§l----- §6§lAide Commands §e§l-----";
-    }
-
     @SubCommand(priority = 1)
     BaseSubCommand chat = new BaseSubCommand() {
 
