@@ -4,7 +4,7 @@ import ink.ptms.aide.bukkit.Sounds
 import io.izzel.taboolib.PluginLoader
 import io.izzel.taboolib.TabooLib
 import io.izzel.taboolib.kotlin.Tasks
-import io.izzel.taboolib.loader.PluginHandle
+import io.izzel.taboolib.loader.PluginBoot
 import io.izzel.taboolib.module.command.base.BaseCommand
 import io.izzel.taboolib.module.command.base.BaseMainCommand
 import io.izzel.taboolib.module.command.base.CommandType
@@ -23,9 +23,9 @@ class CommandAide : BaseMainCommand() {
     fun about(sender: CommandSender, args: Array<String?>?) {
         sender.sendMessage("§7§l[§f§lAide§7§l] §7正在获取版本信息...")
         Tasks.task(true) {
-            val newVersion = PluginHandle.getCurrentVersion()
-            if (newVersion != null) {
-                sender.sendMessage("§7§l[§f§lAide§7§l] §7最新版本: §f" + newVersion[0])
+            val info = PluginBoot.getTabooLibInformation()
+            if (info != null) {
+                sender.sendMessage("§7§l[§f§lAide§7§l] §7最新版本: §f" + info.version)
             }
             sender.sendMessage("§7§l[§f§lAide§7§l] §7当前版本: §f" + TabooLib.getVersion())
             sender.sendMessage("§7§l[§f§lAide§7§l] §7由 §f" + PluginLoader.getFirstLoaded()!!.name + " §7启动")
