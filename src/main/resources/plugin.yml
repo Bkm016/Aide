@@ -8,6 +8,6 @@ main: ${main}
 version: ${version}
 authors: ['坏黑']
 
-lib-download: false
+lib-download: true
 lib-version: ${libVersion}
 api-version: 1.13
