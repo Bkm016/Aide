@@ -22,6 +22,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'ink.ptms.core:v11605:11605'
     implementation 'ink.ptms.core:v11600:11600:all'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib'
     implementation fileTree(dir: 'libs', includes: ['*.jar'])

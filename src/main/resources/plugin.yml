@@ -1,12 +1,10 @@
-
-
 #         Powered by TabooLib 5.0         #
 
 
 name: ${name}
 main: ${main}
 version: ${version}
-authors: ['坏黑']
+authors: [ '坏黑' ]
 
 lib-download: true
 lib-version: ${libVersion}
